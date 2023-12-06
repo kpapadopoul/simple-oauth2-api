@@ -5,3 +5,10 @@ spring:
     username: admin
     password:
 
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: e968bec3c41f89ace1aa
+            clientSecret: c4a975f5e449d7a07cb1f3737ffa22119a6e4960
