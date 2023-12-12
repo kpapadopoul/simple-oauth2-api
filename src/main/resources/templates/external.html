@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="layout :: headerFragment">
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Employee Portal</h1>
+    </div>
+    <div>
+        <p>TBD</p>
+
+        <h2>Existing Employees</h2>
+        <div class="well">
+            <b>Enter the intranet: </b><a th:href="@{/employees}">employees</a>
+        </div>
+    </div>
+    <div id="pagefoot" th:include="layout :: footerFragment">Footer
+    </div>
+</div>
+</body>
+</html>

@@ -1,7 +1,28 @@
+server:
+  port: 50000
+
 spring:
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:localhost;DB_CLOSE_ON_EXIT=FALSE
     username: admin
     password:
+
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: login-app
+            authorization-grant-type: authorization_code
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/SpringBootKeycloak
+            user-name-attribute: preferred_username
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/SpringBootKeycloak
+
+
 
